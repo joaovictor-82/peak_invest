@@ -1,0 +1,16 @@
+<div>
+    <h3>Calcular Parcelas</h3>
+    <form name="form" [formGroup]="form" (submit)="calculate()">
+        <div class="content">
+            <label>Valor:</label>
+            <input type="number" formControlName="totalValue">
+            <label>Parcelas:</label>
+            <input type="number" formControlName="installments">
+            <button type="submit" [disabled]="!form.valid">Calcular</button>
+            <div>
+                <label>Valor Total:</label>
+                <span>{{total | currency : 'BRL'}}</span>
+            </div>
+        </div>
+    </form>
+</div>

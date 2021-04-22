@@ -1,0 +1,15 @@
+<div>
+    <h3>Buscar Cliente</h3>
+    <form name="form" [formGroup]="form" (submit)="find()">
+        <div class="content">
+            <label>Código Cliente:</label>
+            <input type="number" formControlName="customerId">
+            <button type="submit" [disabled]="!form.valid">Buscar</button>
+            <div>
+                <label>Cliente:</label>
+                <span>{{customer.Value}}</span>
+            </div>
+        </div>
+        <span>{{message}}</span>
+    </form>
+</div>
